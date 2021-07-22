@@ -1,0 +1,41 @@
+!!!
+%html
+  %body
+    %header.main_header
+      .header_container
+        .header_layout
+          .header_layout-left
+            = link_to "motorfan", root_path, :class => "motorfan"
+      %nav#navi
+        %ul.nav-menu
+          %li
+            %a{:href => "#my menu"}
+              MY MENU
+          %li
+            %a{:href => "#car"}
+              Cars
+          %li
+            %a{:href => "#bike"}
+              Bikes
+        %ul.nav-sign_status
+          - if user_signed_in?
+            %li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"
+          -else
+            %li
+              = link_to 'ログイン', new_user_session_path, class: "sign_in"
+            %li
+              = link_to '新規登録', new_user_registration_path, class: "sign_up"
+      .toggle_btn 
+        %span
+        %span
+        %span
+      #mask 
+    %main#main
+      -# #video
+      %section#pickup
+        %h2.sec-title
+          PICK UP
+        %ul.oll-area
+          -if @cars.each do |car|
+

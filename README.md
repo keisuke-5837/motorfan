@@ -6,7 +6,7 @@
 | ------------------ | ------ | ------------------------- |
 | email              | string | null: false               |
 | encrypted_password | string | null: false               |
-| name               | string | null: false,              |
+| name               | string | null: false               |
 | user_name          | string | null: false, unique: true |
 | phone_number       | string | null: false               |
 | profile            | text   |                           |
