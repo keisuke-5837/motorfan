@@ -1,0 +1,90 @@
+.registration-main {
+  width : 100%;
+  min-width: 800px;
+  height: 120vh;
+  background-image:url("https://www.gran-turismo.com/images/c/i1s9hXSadwmKU.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  .form-wrap{
+    .form-header{
+      display: flex;
+      position: fixed;
+      .root_path-text{
+        margin: 35px 60px;
+        .motorfan{
+          text-align: center;
+          color: #fff;
+          text-decoration: none;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 80px;
+          font-weight: lighter;
+        }
+      }
+      .form-header-text{
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 100px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: auto;
+      }
+    }
+  }
+  .info-text{
+    display: flex;
+    justify-content: center;
+    .text{
+      margin-top: 20vh;
+      color: #ffffff;
+    }
+  }
+  .form-group {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 20px;
+    color: #ffffff;
+    .form-text-wrap{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 20%;
+      .form-text{
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    .input-default{
+      font: 15px/24px sans-serif;
+      box-sizing: border-box;
+      padding: 0.3em;
+      transition: 0.3s;
+      letter-spacing: 1px;
+      color: #ffffff;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      background: transparent;
+    }
+    p{
+      text-align: center;
+      color: rgb(252, 0, 0);
+    }
+  }
+  .register-btn {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin: 0 auto;
+    .register-red-btn {
+      width: 50%;
+      background: #fc0000c0;
+      border: 1px solid #a7a7a7;
+      color: rgb(0, 0, 0);
+      line-height: 48px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 50px 0 0 0;
+    }
+  }
+}
