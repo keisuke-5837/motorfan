@@ -14,7 +14,7 @@
 ### Association
 has_many :cars
 
-## carsテーブル
+## car_bikesテーブル
 | Column     | Type       | Options                       |
 | ---------- | ---------- | ----------------------------- |
 | user       | references | null: false, foreign_key: true|

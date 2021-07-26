@@ -1,0 +1,128 @@
+!!!
+%html{:lang=>"ja"}
+  %head
+    %meta{:charset=>"utf-8"}
+    %title
+      mortorfan
+    %link{:rel=>"shortcut icon", :href=>"img/favicon.ico"}
+    %link{:rel=>"stylesheet", :href=>"https://unpkg.com/ress/dist/ress.min.css"}
+    %link{:rel=>"stylesheet", :href=>"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"}
+    %link{:rel=>"stylesheet", :href=>"css/style.css"}
+    %javascript{:src=>"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}
+    %javascript{:src=>"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"}
+    %javascript{:src=>"js/main.js"}
+  %body
+    %header#header
+      %h1.site-title
+        = link_to "motorfan", root_path, :class => "motorfan"
+      %nav#navi
+        %ul.nav-menu
+          %li
+            %a{:href=>"#my menu"}
+              MY MENU
+          %li
+            %a{:href=>"#car"}
+              CAR
+          %li
+            %a{:href=>"#bikes"}
+              BIKES
+        %ul.nav-info
+          %li
+            = link_to 'お問い合わせ', "#", class: "info"
+          - if user_signed_in?
+            %li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"
+          -else
+            %li
+              = link_to 'ログイン', new_user_session_path, class: "sign_in"
+            %li
+              = link_to '新規登録', new_user_registration_path, class: "sign_up"
+
+      .toggle_btn
+        %span
+        %span
+        %span
+
+      #mask
+
+    %main#main
+      %section#news
+        %h2.sec-title
+          NEWS
+        %ul.slick-area
+          %li
+            = image_tag "69cfd184814a841fdd974fe07449f41a.jpg", alt:"走行会１ test", size: "300x200"
+          %li
+            = image_tag "3584_1.png", alt:"走行会2 test", size: "300x200"
+          %li
+            = image_tag "1546986.jpg", alt:"走行会3 test", size: "300x200"
+          %li
+            = image_tag "hotchoco_01.jpg", alt:"走行会4 test", size: "300x200"
+          %li
+            = image_tag "large-8760b63081c5af9f3d841a0061df6f27.jpg", alt:"走行会5 test", size: "300x200"
+          %li
+            = image_tag "unnamed.jpg", alt:"走行会6 test", size: "300x200"
+
+      %section#all-snap
+        %h2.sec-title
+          ALL SNAP
+        .grid
+          .item
+            = image_tag "i1_1.ts.2005211204140000.jpg", alt:""
+            .item-content
+              %p.item-cat
+                category
+              %p.item-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.item-date
+                XXXX.XX.XX
+
+          .item
+            = image_tag "IMG_1351.JPG", alt:""
+            .item-content
+              %p.item-cat
+                category
+              %p.item-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.item-date
+                XXXX.XX.XX
+
+          .item
+            = image_tag "IMG_1352.JPG", alt:""
+            .item-content
+              %p.item-cat
+                category
+              %p.item-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.item-date
+                XXXX.XX.XX
+
+          .item
+            = image_tag "IMG_1353.JPG", alt:""
+            .item-content
+              %p.item-cat
+                category
+              %p.item-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.item-date
+                XXXX.XX.XX
+
+          .item
+            = image_tag "IMG_1354.JPG", alt:""
+            .item-content
+              %p.item-cat
+                category
+              %p.item-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.item-date
+                XXXX.XX.XX
+
+          .item
+            = image_tag "IMG_1355.JPG", alt:""
+            .item-content
+              %p.item-cat
+                category
+              %p.item-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.item-date
+                XXXX.XX.XX
