@@ -1,0 +1,2 @@
+class CarBike < ApplicationRecord
+end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "cars#index"
+  root to: "car_bikes#index"
+  resources :car_bikes
 end
