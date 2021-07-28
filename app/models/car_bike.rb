@@ -1,2 +1,0 @@
-class CarBike < ApplicationRecord
-end
