@@ -1,0 +1,88 @@
+.machines-post-contents{
+  height: 100vh;
+  width: 100vw;
+  .machines-post-header{
+    position: fixed;
+    height: 12vh;
+    width: 95%;
+    background-color: rgb(9, 10, 68);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    .root_path-text{
+      margin-top: 8px;
+      .top {
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 80px;
+        font-weight: lighter;
+      }
+    }
+    .header-title{
+      margin-top: 32px;
+      font-size: 35px;
+      color: #fff;
+    }
+    .post-btn{
+      margin-top: 35px;
+      .post-blue-btn {
+        color: rgb(66, 168, 252);
+        font-size: 20px;
+        background: none;
+        border: none;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+  .post-form{
+    height: 100vh;
+    padding-top: 12vh;
+    background-color: rgb(9, 10, 68);
+    .form-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      .post-default{
+        background-color: rgb(9, 10, 68);
+        height: 30vh;
+        font-size: 20px;
+        color: #fff;
+        background: none;
+        border: none;
+        outline: 1px solid slategrey;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      .select-box{
+        background-color: rgb(9, 10, 68);
+        color: #a7a7a7;
+        height: 10vh;
+        font-size: 20px;
+        background: none;
+        border: none;
+        outline: 1px solid slategrey;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+    .machine-image {
+      width: 100%;
+      color: #a7a7a7;
+      height: 10vh;
+      font-size: 20px;
+      background: none;
+      border: none;
+      outline: 1px solid slategrey;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+}

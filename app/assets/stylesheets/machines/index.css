@@ -6,14 +6,17 @@ html {
 body {
   color: #121212;
   font-size: 0.9rem;
-  line-height: 1.7;
 }
 a {
-  color: #121212;
+  color: #fff;
   text-decoration: none;
 }
 img {
   max-width: 100%;
+}
+.top-image {
+  width: 100vw;
+  height: 130vh;
 }
 li {
   list-style: none;
@@ -47,7 +50,7 @@ li {
   padding: 20px 40px;
   position: fixed;
   z-index: 10;
-  background-color: #fff;
+  background-color: black;
 }
 
 #navi {
@@ -188,39 +191,77 @@ News
 All snap
 -------------------------------------------*/
 #all-snap {
-  max-width: 1240px;
+  width: 40vw;
   padding: 100px 16px 50px 16px;
   margin: -50px auto 10px auto;
 }
-#all-snap .grid {
-  display: grid;
-  gap: 26px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-#all-snap .grid .item {
+#all-snap .snap {
+  height: 55vh;
+  margin-top: 20px;
   transition: all  0.3s ease;
   box-shadow: 0 0 8px 4px #ccc;
 }
-#all-snap .grid img {
+#all-snap img {
   vertical-align: top;
   width: 100vw;
   height: 30vh;
 }
-#all-snap .grid .item-content {
+#all-snap .snap-content {
   padding: 30px;
 }
-#all-snap .grid .item-cat {
+#all-snap .user-name{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+#all-snap .snap-text {
+  font-weight: normal;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  
+}
+#all-snap .snap-date {
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+/*-------------------------------------------
+All snap(model)
+-------------------------------------------*/
+#all-snap {
+  max-width: 1240px;
+  padding: 100px 16px 50px 16px;
+  margin: -50px auto 10px auto;
+}
+#all-snap .grid-model {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+#all-snap .grid-model .snap-model {
+  transition: all  0.3s ease;
+  box-shadow: 0 0 8px 4px #ccc;
+}
+#all-snap .grid-model img {
+  vertical-align: top;
+  width: 100vw;
+  height: 30vh;
+}
+#all-snap .grid-model .snap-content-model {
+  padding: 30px;
+}
+#all-snap .grid-model .snap-cat-model {
   font-size: 0.75rem;
   margin-bottom: 20px;
 }
-#all-snap .grid .item-text {
+#all-snap .grid-model .snap-text-model {
   font-weight: bold;
   margin-bottom: 20px;
 }
-#all-snap .grid .item-date {
+#all-snap .grid-model .snap-date-model {
   font-size: 0.75rem;
   text-align: right;
 }
+
 /*-------------------------------------------
 フッター
 -------------------------------------------*/

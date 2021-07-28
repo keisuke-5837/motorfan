@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CarBikesControllerTest < ActionDispatch::IntegrationTest
+class MachinesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -1,0 +1,16 @@
+= form_with model: @machine, url: machines_path , class: "machine-post", local: true do |f|
+  .machines-post-contents
+    .machines-post-header
+      .root_path-text
+        = link_to "×", root_path, :class => "top"
+      %h1.header-title
+        新規投稿
+      %h1.post-btn
+        = f.submit "シェア", class:"post-blue-btn"
+    .post-form
+      .form-group
+        = f.text_area :charm, class:"post-default", id:"charm", placeholder:"キャプションを書く"
+      .form-group
+        = f.file_field :image, id:"machine-image", class: "machine-image"
+      .form-group
+        = f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category"})
