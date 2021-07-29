@@ -3,6 +3,12 @@ class MachinesController < ApplicationController
     @machines = Machine.order("created_at DESC")
   end
 
+  def car
+  end
+
+  def bike
+  end
+
   def new
     @machine = Machine.new
   end
@@ -14,6 +20,10 @@ class MachinesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @machines = Machine.All
   end
 
   private

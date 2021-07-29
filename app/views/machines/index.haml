@@ -14,18 +14,18 @@
   %body
     %header#header
       %h1.site-title
-        = link_to "motorfan", root_path, :class => "motorfan"
+        = link_to "motorfan", root_path, class: "motorfan"
       %nav#navi
         %ul.nav-menu
           %li
-            %a{:href=>"#my menu"}
-              MY MENU
+            %a
+              = link_to "MY MENU", user_path(current_user.id), class: "user-show"
           %li
-            %a{:href=>"#car"}
-              CAR
+            %a
+              = link_to "CAR", car_machines_path
           %li
-            %a{:href=>"#bikes"}
-              BIKES
+            %a 
+              = link_to "BIKE", bike_machines_path
         %ul.nav-info
           - if user_signed_in?
             %li

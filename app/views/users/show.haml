@@ -1,0 +1,21 @@
+.user-show-contents
+  .user-show-header
+    .user-name 
+      = @user.user_name
+    .root_path-text
+      = link_to "×", root_path, :class => "top"
+  %main
+    .icon-image
+      = image_tag "IMG_1351.JPG", :class=> "image"
+    .name
+      .under-name
+        test
+    .user-edit
+      = link_to "プロフィールを編集", edit_user_path(@user.id), :class => "edit"
+    .post-all
+      %p.post
+        投稿一覧
+    .user-snap 
+      - @machines.each do |machine|
+        .snap
+          = image_tag machine.image, height: "200px"
