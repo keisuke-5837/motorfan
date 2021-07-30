@@ -1,0 +1,37 @@
+.bike-category-contents{
+  width: 100vw;
+  height: 100vh;
+  .bike-category-header{
+    position: fixed;
+    height: 6vh;
+    width: 95%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    border-bottom: 1px solid slategrey;
+    .root_path-text{
+      margin-top: 4px;
+      font-size: 40px;
+      font-weight: lighter;
+    }
+    .header-title{
+      color: black;
+      margin: auto;
+      font-size: 25px;
+    }
+  }
+  .bike-snap{
+    width: 40vw;
+    margin: auto;
+    padding: 100px 16px 50px 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    .snap{
+      transition: all  0.3s ease;
+      vertical-align: top;
+      width: 300px;
+    }
+  }
+}

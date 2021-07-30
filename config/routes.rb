@@ -9,7 +9,13 @@ Rails.application.routes.draw do
       get :car
     end
     collection do
+      get :car_show
+    end
+    collection do
       get :bike
+    end
+    collection do
+      get :bike_show
     end
   end
   resources :users
