@@ -9,6 +9,12 @@ class MachinesController < ApplicationController
     @machine = Machine.where(category_id: 2)
   end
 
+  def car_show
+    @user = User.all
+    @machines = Machine.all
+    @machine = Machine.where(category_id: 2)
+  end
+
   def bike
     @machines = Machine.all
     @machine = Machine.where(category_id: 3)

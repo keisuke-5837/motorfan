@@ -6,5 +6,7 @@
       CAR
   .car-snap 
     - @machine.each do |machine|
-      .snap
-        = image_tag machine.image, height: "200px"
+      %li
+        = link_to car_show_machines_path do
+          .snap
+            = image_tag machine.image, height: "200px"

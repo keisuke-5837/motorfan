@@ -1,0 +1,83 @@
+.car_show-category-contents{
+  width: 100vw;
+  height: 100vh;
+  .car_show-category-header{
+    position: fixed;
+    height: 6vh;
+    width: 95%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    border-bottom: 1px solid slategrey;
+    .car_path-text{
+      margin-top: 4px;
+      font-size: 35px;
+      font-weight: lighter;
+    }
+    .header-title{
+      color: black;
+      margin: auto;
+      font-size: 25px;
+    }
+  }
+  .car_show-snap{
+    width: 80vw;
+    margin: auto;
+    padding: 100px 16px 50px 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    height: 15vh;
+    .snap{
+      transition: all  0.3s ease;
+      vertical-align: top;
+      .post-header{
+        display: flex;
+        height: 35px;
+        font-size: 15px;
+        padding-left: 2px;
+        .icon-image{
+          margin-top: 2px;
+          margin-right: 15px;
+          .car_show-image{
+            object-fit: cover;
+            border-radius: 100%;
+            height: 30px;
+            width: 30px;
+          }
+        }
+        .user-name{
+          padding-top: 5px;
+          font-size: 20px;
+          color: black;
+        }
+      }
+      img {
+        vertical-align: top;
+        height: 35vh;
+      }
+      .snap-content {
+        padding: 10px;
+        .display-form{
+          display: flex;
+          height: 10vh;
+          .user-name{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+          }
+          .snap-text {
+            font-weight: normal;
+            margin-top: 4px;
+            margin-left: 10px;
+            word-wrap: break-word;
+          }
+        }
+        .snap-date {
+          font-size: 0.75rem;
+          text-align-last: left;
+        }
+      }
+    }
+  }
+}
