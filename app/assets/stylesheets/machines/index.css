@@ -8,8 +8,9 @@ body {
   font-size: 0.9rem;
 }
 a {
-  color: #fff;
+  color: black;
   text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
 }
 img {
   max-width: 100%;

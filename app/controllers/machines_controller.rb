@@ -1,9 +1,12 @@
 class MachinesController < ApplicationController
   def index
     @machines = Machine.order("created_at DESC")
+    @users = User.all
   end
 
   def car
+    @machines = Machine.all
+    @machine = Machine.where(category_id: 2)
   end
 
   def bike

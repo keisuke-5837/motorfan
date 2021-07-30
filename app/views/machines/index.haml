@@ -17,9 +17,10 @@
         = link_to "motorfan", root_path, class: "motorfan"
       %nav#navi
         %ul.nav-menu
-          %li
-            %a
-              = link_to "MY MENU", user_path(current_user.id), class: "user-show"
+          - if user_signed_in?
+            %li
+              %a
+                = link_to "MY MENU", user_path(current_user.id), class: "user-show"
           %li
             %a
               = link_to "CAR", car_machines_path
