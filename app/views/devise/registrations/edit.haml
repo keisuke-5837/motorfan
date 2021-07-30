@@ -1,0 +1,34 @@
+= form_with model: @user, url: user_registration_path, method: :put, local: true do |f|
+  .user-edit-contents
+    .user-edit-header
+      .cancel-text
+        = link_to "キャンセル", user_path(@user.id), :class => "cancel"
+      %h1.header-title
+        プロフィールを編集
+      %h1.post-btn
+        = f.submit "完了", class:"post-blue-btn"
+    .icon-image
+      = image_tag "IMG_1351.JPG", :class=> "image"
+    .image-edit
+      %label
+        = f.file_field :image, id:"edit-image", class: "edit-image"
+        プロフィール画像を編集
+    .edit-form
+      .form-group
+        .info-text
+          %p.text
+            名前
+        %p
+          = f.text_field :name, class:"edit-default", id:"name", placeholder:"名前"
+      .form-group
+        .info-text
+          %p.text
+            ユーザーネーム
+        %p
+          = f.text_field :user_name, class:"edit-default", id:"user_name", placeholder:"ユーザーネーム"
+      .form-group
+        .info-text
+          %p.text
+            自己紹介
+        %p
+          = f.text_field :introduction, class:"edit-default", id:"introduction", placeholder:"自己紹介"
