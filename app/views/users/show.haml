@@ -11,7 +11,7 @@
       .under-name
         test
     .user-edit
-      = link_to "プロフィールを編集", edit_user_path(@user.id), :class => "edit"
+      = link_to "プロフィールを編集",  edit_user_registration_path(@user.id), :class => "edit"
     .post-all
       %p.post
         投稿一覧

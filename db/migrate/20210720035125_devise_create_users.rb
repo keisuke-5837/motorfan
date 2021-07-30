@@ -9,7 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :user_name,          null: false, unique: true
       t.string :phone_number,       null: false
-      t.text   :profile
+      t.text   :introduction
 
 
       ## Recoverable
