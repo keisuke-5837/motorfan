@@ -1,0 +1,10 @@
+.car-category-contents
+  .car-category-header
+    .root_path-text
+      = link_to "×", root_path, :class => "top"
+    %h1.header-title
+      CAR
+  .car-snap 
+    - @machine.each do |machine|
+      .snap
+        = image_tag machine.image, height: "200px"
