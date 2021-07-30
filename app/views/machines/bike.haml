@@ -1,0 +1,12 @@
+.bike-category-contents
+  .bike-category-header
+    .root_path-text
+      = link_to "×", root_path, :class => "top"
+    %h1.header-title
+      BIKE
+  %ul.bike-snap 
+    - @machine.each do |machine|
+      %li
+        = link_to bike_show_machines_path do
+          .snap
+            = image_tag machine.image, height: "200px"

@@ -10,6 +10,14 @@ class MachinesController < ApplicationController
   end
 
   def bike
+    @machines = Machine.all
+    @machine = Machine.where(category_id: 3)
+  end
+
+  def bike_show
+    @user = User.all
+    @machines = Machine.all
+    @machine = Machine.where(category_id: 3)
   end
 
   def new
@@ -23,10 +31,6 @@ class MachinesController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
-    @machines = Machine.All
   end
 
   private
