@@ -5,24 +5,25 @@
     position: fixed;
     height: 12vh;
     width: 95%;
-    background-color: rgb(9, 10, 68);
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    border-bottom: 1px solid rgb(209, 209, 209);
     .root_path-text{
-      margin-top: 8px;
+      margin-top: 40px;
       .top {
-        color: #fff;
+        color: black;
         text-decoration: none;
         font-family: 'Times New Roman', Times, serif;
-        font-size: 80px;
+        font-size: 20px;
         font-weight: lighter;
       }
     }
     .header-title{
       margin-top: 32px;
       font-size: 35px;
-      color: #fff;
+      color: black;
     }
     .post-btn{
       margin-top: 35px;
@@ -41,32 +42,32 @@
   .post-form{
     height: 100vh;
     padding-top: 12vh;
-    background-color: rgb(9, 10, 68);
+    background-color: #fff;
     .form-group {
       width: 100%;
       display: flex;
       flex-direction: column;
       margin: 0 auto;
       .post-default{
-        background-color: rgb(9, 10, 68);
+        background-color: #fff;
         height: 30vh;
         font-size: 20px;
-        color: #fff;
+        color: black;
         background: none;
         border: none;
-        outline: 1px solid slategrey;
+        outline: 1px solid rgb(209, 209, 209);
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
       }
       .select-box{
-        background-color: rgb(9, 10, 68);
+        background-color: #fff;
         color: #a7a7a7;
         height: 10vh;
         font-size: 20px;
         background: none;
         border: none;
-        outline: 1px solid slategrey;
+        border-bottom: 1px solid rgb(209, 209, 209);
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -79,7 +80,7 @@
       font-size: 20px;
       background: none;
       border: none;
-      outline: 1px solid slategrey;
+      border-bottom: 1px solid rgb(209, 209, 209);
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
