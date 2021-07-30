@@ -27,11 +27,7 @@ li {
   font-family: 'Times New Roman', Times, serif;
   font-size: 40px;
   margin: 20px 0 0 0;
-}
-.sec-title {
-  font-size: 2.25rem;
-  margin-bottom: 30px;
-  text-align: center;
+  color: black;
 }
 
 .fadein {
@@ -51,7 +47,8 @@ li {
   padding: 20px 40px;
   position: fixed;
   z-index: 10;
-  background-color: black;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(241, 241, 241);
 }
 
 #navi {
@@ -168,6 +165,11 @@ Main
 /*-------------------------------------------
 News
 -------------------------------------------*/
+.news-title{
+  font-size: 2.25rem;
+  margin-top: 150px;
+  text-align: center;
+}
 #news {
   width: 100%;
   padding: 100px 0 50px 0;
@@ -191,24 +193,50 @@ News
 /*-------------------------------------------
 All snap
 -------------------------------------------*/
+.all-snap-title{
+  font-size: 2.25rem;
+  margin-bottom: 100px;
+  margin-top: 150px;
+  text-align: center;
+}
 #all-snap {
-  width: 40vw;
+  width: 80vw;
+  margin: auto;
   padding: 100px 16px 50px 16px;
-  margin: -50px auto 10px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 #all-snap .snap {
-  height: 55vh;
-  margin-top: 20px;
   transition: all  0.3s ease;
-  box-shadow: 0 0 8px 4px #ccc;
-}
-#all-snap img {
   vertical-align: top;
-  width: 100vw;
-  height: 30vh;
+}
+.post-header{
+  display: flex;
+  height: 35px;
+  font-size: 15px;
+  padding-left: 2px;
+}
+.icon-image{
+  margin-top: 2px;
+  margin-right: 15px;
+}
+.user_show-image{
+  object-fit: cover;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+}
+.snap img {
+  vertical-align: top;
 }
 #all-snap .snap-content {
-  padding: 30px;
+  padding: 10px;
+  height: 15vh;
+}
+.display-form{
+  display: flex;
+  height: 10vh;
 }
 #all-snap .user-name{
   font-family: 'Times New Roman', Times, serif;
@@ -216,13 +244,13 @@ All snap
 }
 #all-snap .snap-text {
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-top: 4px;
+  margin-left: 10px;
   word-wrap: break-word;
-  
 }
 #all-snap .snap-date {
   font-size: 0.75rem;
-  text-align: left;
+  text-align-last: left;
 }
 
 /*-------------------------------------------

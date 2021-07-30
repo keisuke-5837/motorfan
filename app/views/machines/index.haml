@@ -14,19 +14,19 @@
   %body
     %header#header
       %h1.site-title
-        = link_to "motorfan", root_path, class: "motorfan"
+        motorfan
       %nav#navi
         %ul.nav-menu
           - if user_signed_in?
             %li
               %a
                 = link_to "MY MENU", user_path(current_user.id), class: "user-show"
-          %li
-            %a
-              = link_to "CAR", car_machines_path
-          %li
-            %a 
-              = link_to "BIKE", bike_machines_path
+            %li
+              %a
+                = link_to "CAR", car_machines_path
+            %li
+              %a 
+                = link_to "BIKE", bike_machines_path
         %ul.nav-info
           - if user_signed_in?
             %li
@@ -49,38 +49,77 @@
       #mask
 
     %main#main
-      = image_tag "IMG_1362.JPG", class: "top-image"
+      = image_tag "2B6D54DB-BCC6-4633-A78F-2C9DE3937008.jpg", class: "top-image"
+      %h2.news-title
+        NEWS
       %section#news
-        %h2.sec-title
-          NEWS
         %ul.slick-area
           %li
             = image_tag "69cfd184814a841fdd974fe07449f41a.jpg", alt:"走行会１ test", size: "300x200"
+            .news-content
+              %p.news-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.news-date
+                XXXX.XX.XX
           %li
             = image_tag "3584_1.png", alt:"走行会2 test", size: "300x200"
+            .news-content
+              %p.news-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.news-date
+                XXXX.XX.XX
           %li
             = image_tag "1546986.jpg", alt:"走行会3 test", size: "300x200"
+            .news-content
+              %p.news-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.news-date
+                XXXX.XX.XX
           %li
             = image_tag "hotchoco_01.jpg", alt:"走行会4 test", size: "300x200"
+            .news-content
+              %p.news-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.news-date
+                XXXX.XX.XX
           %li
             = image_tag "large-8760b63081c5af9f3d841a0061df6f27.jpg", alt:"走行会5 test", size: "300x200"
+            .news-content
+              %p.news-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.news-date
+                XXXX.XX.XX
           %li
             = image_tag "unnamed.jpg", alt:"走行会6 test", size: "300x200"
-
+            .news-content
+              %p.news-text
+                テキストテキストテキストテキストテキストテキストテキストテキスト
+              %p.news-date
+                XXXX.XX.XX
+      %h2.all-snap-title
+        ALL SNAP
       %section#all-snap
-        %h2.sec-title
-          ALL SNAP
         - if @machines.present?
           - @machines.each do |machine|
             .snap
+              %ul.post-header
+                %li
+                  = link_to user_path(machine.user_id) do
+                    .icon-image
+                      = image_tag "IMG_1351.JPG", :class=> "user_show-image"
+                %li
+                  = link_to user_path(machine.user_id) do
+                    .user-name
+                      = machine.user.user_name
               = image_tag machine.image
               .snap-content
-                .user-name
-                  = machine.user.user_name
-                %p.snap-text
-                  = machine.charm
+                .display-form
+                  .user-name
+                    = machine.user.user_name
+                  %p.snap-text
+                    = machine.charm
                 %p.snap-date
-                  XXXX.XX.XX
+                  = l machine.created_at, format: :short
         - else 
           .grid-model
             .snap-model
