@@ -24,4 +24,4 @@
             .snap-text
               = machine.charm
           %p.snap-date
-            XXXX.XX.XX
+            = l machine.created_at, format: :short

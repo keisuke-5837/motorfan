@@ -5,25 +5,22 @@ class MachinesController < ApplicationController
   end
 
   def car
-    @machines = Machine.all
-    @machine = Machine.where(category_id: 2)
+    @machine = Machine.where(category_id: 2).order("created_at DESC")
+    @user = User.all
   end
 
   def car_show
+    @machine = Machine.where(category_id: 2).order("created_at DESC")
     @user = User.all
-    @machines = Machine.all
-    @machine = Machine.where(category_id: 2)
   end
 
   def bike
-    @machines = Machine.all
-    @machine = Machine.where(category_id: 3)
+    @machine = Machine.where(category_id: 3).order("created_at DESC")
   end
 
   def bike_show
     @user = User.all
-    @machines = Machine.all
-    @machine = Machine.where(category_id: 3)
+    @machine = Machine.where(category_id: 3).order("created_at DESC")
   end
 
   def new
