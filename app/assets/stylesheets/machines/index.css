@@ -217,8 +217,7 @@ All snap
   font-size: 15px;
   padding-left: 2px;
 }
-.icon-image{
-  margin-top: 2px;
+.icon-index-image{
   margin-right: 15px;
 }
 .user_show-image{
@@ -227,12 +226,18 @@ All snap
   height: 30px;
   width: 30px;
 }
-.snap img {
+.header-user-name{
+  margin-top: 4px;
+  font-size: 20px;
+}
+.snap-image {
   vertical-align: top;
+  width: 390px;
+  height: 200px;
 }
 #all-snap .snap-content {
-  padding: 10px;
-  height: 15vh;
+  padding: 7px;
+  height: 17vh;
 }
 .display-form{
   display: flex;
@@ -240,16 +245,21 @@ All snap
 }
 #all-snap .user-name{
   font-family: 'Times New Roman', Times, serif;
+  height: 20px;
   font-size: 20px;
 }
 #all-snap .snap-text {
   font-weight: normal;
   margin-top: 4px;
+  margin-right: 10px;
   margin-left: 10px;
   word-wrap: break-word;
+  width: 14vw;
+  overflow: scroll;
 }
 #all-snap .snap-date {
   font-size: 0.75rem;
+  margin-top: 10px;
   text-align-last: left;
 }
 
