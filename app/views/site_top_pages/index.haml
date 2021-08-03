@@ -1,0 +1,22 @@
+!!!
+%head
+  %javascript{:src=>"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+  %javascript{:src=>"js/site_top_pages.js"}
+%body
+  = video_tag("/videos/final.mp4", autoplay: :true, loop: :true, muted: :true, class: 'video-content')
+  .site-top-page-contents
+    %header.site-top-page-header
+      .top-page-header
+        %h1.header-title
+          motorfan
+    .site-top-page-main
+      .site-top-page-bottom
+        .bottom_menu1
+          = link_to "新規登録", new_user_registration_path, class: "top-sign_up"
+          = link_to "ログイン", new_user_session_path, class: "top-sign_in"
+        %ul.bottom_menu2
+          %li
+            = link_to "ゲストとして見に行く", machines_path, class: "guests"
+
+
+
