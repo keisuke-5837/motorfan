@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :show,]
 
   def show
-    @machines = Machine.order("user_id DESC")
+    @machines = @user.machines.order("created_at DESC")
   end
 
   def edit

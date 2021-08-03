@@ -1,0 +1,78 @@
+.video-content{
+  text-align: center;
+  position: fixed;
+  right: 0; bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto; 
+  z-index: -1000;
+}
+.site-top-page-contents{
+  width: 100vw;
+  height: 100vh;
+  .site-top-page-header{
+    .top-page-header{
+      position: fixed;
+      height: 6vh;
+      width: 95%;
+      display: flex;
+      justify-content: center;
+      padding: 0 40px;
+      .header-title{
+        color: #fff;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 50px;
+      }
+    }
+  }
+  .site-top-page-main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    .site-info{
+      padding-top: 200px;
+      color: #fff;
+      text-align: center;
+      font-size: 40px;
+    }
+    .site-top-page-bottom{
+      position: absolute;
+      position: fixed;
+      bottom: 0;
+      height: 15vh;
+      width: 100vw;
+      z-index: +1;
+      .bottom_menu1{
+        display: flex;
+        justify-content: center;
+        .top-sign_up{
+          text-align: center;
+          padding: 10px;
+          margin-top: 20px;
+          font-size: 25px;
+          color: #fff;
+          text-decoration: solid;
+        }
+        .top-sign_in{
+          text-align: center;
+          padding: 10px;
+          margin-top: 20px;
+          font-size: 25px;
+          color: #fff;
+        }
+      }
+      .bottom_menu2{
+        display: flex;
+        justify-content: center;
+        .guests{
+          text-align: center;
+          margin-top: 20px;
+          font-size: 14px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

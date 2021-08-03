@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     sessions: "users/sessions",
     registrations: "users/registrations"
   }
-  root to: "machines#index"
+  root to: "site_top_pages#index"
   resources :machines do
     collection do
       get :car
