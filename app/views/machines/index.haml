@@ -17,17 +17,17 @@
       %h1.site-title
         motorfan
       %nav#navi
+        .current_user
+          = current_user.user_name
         %ul.nav-menu
           - if user_signed_in?
             %li
-              %a
-                = link_to "MY MENU", user_path(current_user.id), class: "user-show"
+              = link_to "MY MENU", user_path(current_user.id), class: "user-show"
           %li
             %a
               = link_to "CAR", car_machines_path
           %li
-            %a 
-              = link_to "BIKE", bike_machines_path
+            = link_to "BIKE", bike_machines_path
         %ul.nav-info
           - if user_signed_in?
             %li
@@ -82,11 +82,12 @@
                   = link_to user_path(machine.user_id) do
                     .header-user-name
                       = machine.user.user_name
-                %ul.syncer-acdn
-                  %li
-                    = link_to "編集", edit_machine_path(machine.id)
-                  %li
-                    = link_to "削除",  machine_path(machine.id), method: :delete
+                - if current_user.id == machine.user_id
+                  %ul.syncer-acdn
+                    %li
+                      = link_to "編集", edit_machine_path(machine.id)
+                    %li
+                      = link_to "削除",  machine_path(machine.id), method: :delete
               = image_tag machine.image, class: "snap-image"
               .snap-content
                 .display-form

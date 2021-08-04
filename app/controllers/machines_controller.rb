@@ -1,6 +1,9 @@
 class MachinesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :set_machine, only: [:edit, :update, :destroy]
   before_action :machine_set_ategory2, only: [:car, :car_show]
   before_action :machine_set_ategory3, only: [:bike, :bike_show]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
   
 
   def index
@@ -69,5 +72,15 @@ class MachinesController < ApplicationController
 
   def machine_set_ategory3
     @machine = Machine.where(category_id: 3).order("created_at DESC")
+  end
+
+  def set_machine
+    @machine = Machine.find(params[:id])
+  end
+
+  def move_to_index
+    if @machine.user_id != current_user.id
+      redirect_to machines_path
+    end
   end
 end

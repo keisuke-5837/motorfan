@@ -59,7 +59,7 @@ li {
   bottom: 0;
   width: 300px;
   color: #fff;
-  padding: 60px 25px;
+  padding: 30px 25px;
   background-color: #121212;
   overflow-x: hidden;
   overflow-y: auto;
@@ -67,6 +67,11 @@ li {
   transition: all .5s;
   z-index: 20;
   opacity: 0;
+}
+.current_user{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
 }
 #navi a {
   color: #fff;
@@ -210,6 +215,8 @@ All snap
 #all-snap .snap {
   transition: all  0.3s ease;
   vertical-align: top;
+  margin: ;
+  box-shadow: 0 0 8px 4px #ccc;
 }
 .post-header{
   display: flex;
