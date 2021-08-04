@@ -1,8 +1,8 @@
 = form_with model: @machine, url: machines_path , class: "machine-post", local: true do |f|
   .machines-post-contents
     .machines-post-header
-      .root_path-text
-        = link_to "キャンセル", root_path, :class => "top"
+      .machines_path-text
+        = link_to "キャンセル", machines_path, :class => "top"
       %h1.header-title
         新規投稿
       %h1.post-btn
