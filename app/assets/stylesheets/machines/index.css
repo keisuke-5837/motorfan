@@ -217,10 +217,8 @@ All snap
   font-size: 15px;
   padding-left: 2px;
 }
-.acdn-content{
-  width: 200px ;
-  height: 200px ;
-	background: #D36015 ;
+.syncer-acdn{
+  margin-left: 200px;
 }
 .icon-index-image{
   margin-right: 15px;

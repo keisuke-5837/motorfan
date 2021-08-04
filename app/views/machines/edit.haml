@@ -1,0 +1,12 @@
+= form_with model: @machine, url: machine_path , class: "machine-edit", local: true do |f|
+  .machines-edit-contents
+    .machines-edit-header
+      .machines_path-text
+        = link_to "キャンセル", machines_path, :class => "top"
+      %h1.header-title
+        編集
+      %h1.edit-btn
+        = f.submit "編集する", class:"edit-blue-btn"
+    .edit-form
+      .form-group
+        = f.text_area :charm, class:"edit-default", id:"charm", placeholder:"キャプションを書く"

@@ -38,6 +38,14 @@ class MachinesController < ApplicationController
     @machine = Machine.find(params[:id])
   end
 
+  def update
+    @machine = Machine.find(params[:id])
+    if @machine.update(edit_params)
+      redirect_to machines_path
+    else
+      render :edit
+    end
+  end
 
   def destroy
     @machine = Machine.find(params[:id])
@@ -52,6 +60,9 @@ class MachinesController < ApplicationController
     params.require(:machine).permit(:charm, :category_id, :image).merge(user_id: current_user.id)
   end
 
+  def edit_params
+    params.require(:machine).permit(:charm).merge(user_id: current_user.id)
+  end
   def machine_set_ategory2
     @machine = Machine.where(category_id: 2).order("created_at DESC")
   end
