@@ -285,13 +285,18 @@ All snap(model)
   margin: -50px auto 10px auto;
 }
 #all-snap .grid-model {
+  width: 80vw;
+  margin: auto;
+  padding: 90px 0px 50px 0px;
   display: grid;
-  gap: 26px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 #all-snap .grid-model .snap-model {
   transition: all  0.3s ease;
   box-shadow: 0 0 8px 4px #ccc;
+  width: 450px;
+  margin: 7px;
 }
 #all-snap .grid-model img {
   vertical-align: top;
