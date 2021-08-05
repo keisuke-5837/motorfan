@@ -5,13 +5,24 @@
     .machines_path-text
       = link_to "×", machines_path, :class => "top"
   %main
-    .icon-image
-      = image_tag "IMG_1351.JPG", :class=> "image"
+    - if @user.image.present?
+      .icon-image
+        = image_tag @user.image, :class=> "image"
+    - else
+      .icon-image
+        = image_tag "IMG_1351.JPG", :class=> "image"
     .name
-      .under-name
-        test
+      - if @user.name.present?
+        .under-name
+          = @user.name
+      - else
+        .under-name
+          test
+    .introduction
+      .under-introduction
+        = @user.introduction
     .user-edit
-      = link_to "プロフィールを編集", edit_user_registration_path(@user.id), :class => "edit"
+      = link_to "プロフィールを編集", edit_user_path(@user.id), :class => "edit"
     .post-all
       %p.post
         投稿一覧

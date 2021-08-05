@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :show,]
+  before_action :set_user, only: [:edit, :update, :show,]
 
   def show
     @machines = @user.machines.order("created_at DESC")
@@ -9,8 +9,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_params)
-      redirect_to user_path(current_user.id)
+    if @user.update(user_params)
+      redirect_to user_path(@user.id)
     else
       render :edit
     end

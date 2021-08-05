@@ -227,11 +227,12 @@ All snap
 }
 .syncer-acdn{
   margin-top: 10px;
-  margin-left: 280px;
+  margin-left: 270px;
 }
 .icon-index-image{
   margin-top: 10px;
   margin-right: 15px;
+  margin-left: 10px;
 }
 .user_show-image{
   object-fit: cover;

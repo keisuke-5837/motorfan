@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :machines
 
-  validates :password, format: {with: VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i}
+  # validates :password, format: {with: VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i}
 
   with_options presence: true do
     validates :phone_number, format: {with: /\A\d{10,11}\z/}

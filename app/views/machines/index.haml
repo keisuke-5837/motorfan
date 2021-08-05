@@ -76,8 +76,12 @@
               %ul.post-header
                 %li
                   = link_to user_path(machine.user_id) do
-                    .icon-index-image
-                      = image_tag "IMG_1351.JPG", :class=> "user_show-image"
+                    - if machine.user.image.present?
+                      .icon-index-image
+                        = image_tag machine.user.image, :class=> "user_show-image"
+                    - else
+                      .icon-index-image
+                        = image_tag "IMG_1351.JPG", :class=> "user_show-image"
                 %li
                   = link_to user_path(machine.user_id) do
                     .header-user-name

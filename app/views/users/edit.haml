@@ -1,4 +1,4 @@
-= form_with model: @user, url: user_registration_path, method: :put, local: true do |f|
+= form_with model: @user, url: user_path(@user.id), method: :put, local: true do |f|
   .user-edit-contents
     .user-edit-header
       .cancel-text
@@ -26,6 +26,8 @@
             ユーザーネーム
         %p
           = f.text_field :user_name, class:"edit-default", id:"user_name", placeholder:"ユーザーネーム"
+        -if @user.errors.include?(:user_name)
+          %p= @user.errors.full_messages_for(:user_name).first
       .form-group
         .info-text
           %p.text

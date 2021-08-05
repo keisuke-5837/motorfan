@@ -3,3 +3,8 @@ ja:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
       short: "%m月%d日 %H時%M分"
+  activerecord:
+    attributes:
+      user:
+        user_name: ユーザーネーム
+        phone_number: 携帯番号

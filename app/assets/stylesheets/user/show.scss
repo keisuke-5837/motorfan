@@ -5,14 +5,15 @@
     position: fixed;
     height: 12vh;
     width: 95%;
-    background-color: black;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    border-bottom: 1px solid rgb(241, 241, 241);
     .machines_path-text{
       margin-top: 15px;
       .top {
-        color: #fff;
+        color: black;
         text-decoration: none;
         font-family: 'Times New Roman', Times, serif;
         font-size: 70px;
@@ -20,7 +21,7 @@
       }
     }
     .user-name{
-      color: white;
+      color: black;
       font-family: 'Times New Roman', Times, serif;
       font-size: 40px;
       margin-top: 27px;
@@ -46,10 +47,20 @@
       font-size: 30px;
     }
   }
+  .introduction{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    .under-introduction{
+      margin-top: 10px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 15px;
+    }
+  }
   .user-edit{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 25px;
     .edit{
       height: 20px;
       width: 15vw;
