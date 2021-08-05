@@ -16,7 +16,6 @@
           = link_to "ログイン", new_user_session_path, class: "top-sign_in"
         %ul.bottom_menu2
           %li
-            = link_to "ゲストとして見に行く", machines_path, class: "guests"
-
+            = link_to "ゲストとして見に行く", users_guest_sign_in_path, method: :post, class: "guests"
 
 

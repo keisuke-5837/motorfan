@@ -34,4 +34,10 @@ class Users::SessionsController < Devise::SessionsController
   def after_inactive_sign_in_path_for(resource)
     machines_path
   end
+
+  def guest_sign_in
+    user = User.guest
+    sign_in user
+    redirect_to machines_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
 end
