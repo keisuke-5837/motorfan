@@ -45,6 +45,7 @@
 <br></br>
 
 [![Image from Gyazo](https://i.gyazo.com/2ef9200f08ee91dcb6bfb08ddb3af322.gif)](https://gyazo.com/2ef9200f08ee91dcb6bfb08ddb3af322)
+<br></br>
 
 新規登録画面になります。こちらに必要な情報を入力し会員登録を押すと登録でき、投稿表示画面に遷移します。  
 左上の×ボタンを押すとトップページに戻って来ることができます。
