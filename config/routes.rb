@@ -21,6 +21,9 @@ Rails.application.routes.draw do
     collection do
       get :bike_show
     end
+    collection do
+      get :comment
+    end
   end
   resources :users
 end
