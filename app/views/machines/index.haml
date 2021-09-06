@@ -24,10 +24,11 @@
             %li
               = link_to "MY MENU", user_path(current_user.id), class: "user-show"
           %li
-            %a
-              = link_to "CAR", car_machines_path
+            = link_to "CAR", car_machines_path
           %li
             = link_to "BIKE", bike_machines_path
+          %li
+            = link_to "メッセージ", comment_path
         %ul.nav-info
           - if user_signed_in?
             %li
